@@ -1,0 +1,104 @@
+/* * {
+  box-sizing: border-box;
+} */
+#h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    text-align: center;
+    font-weight: bold;
+    color: deeppink;
+    font-weight: 900;
+    border-radius: 16px;
+  }
+  .signup {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
+    margin-top: 3rem;
+    margin-left: 50rem;
+    /* margin: 70px auto; */
+    border-radius: 50px;
+    overflow: hidden;
+    height: 700px;
+    background-image: url('/public/images/back.png');
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='phone'],
+  input[type='work'],
+  input[type='password'] {
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    display: inline;
+    padding: 9px 15px;
+    margin: 1px 0;
+    border: none;
+    text-transform: none;
+    border-bottom: 3px solid orchid;
+    color: black;
+    border-radius: 20px;
+    box-shadow: inset 3px 3px 3px #cbced1, inset -8px -8px 8px #fff;
+  }
+  .account {
+    color: blueviolet;
+  }
+  .email {
+    color: coral;
+  }
+  .phone {
+    color: gold;
+  }
+  .work {
+    color: orchid;
+  }
+  .password {
+    color: deeppink;
+  }
+  input[type='submit'] {
+    width: 30%;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: #852d91;
+    background: -moz-linear-gradient(to right, #852d91 0%, #312a6c 99%);
+    background: -webkit-linear-gradient(to right, #852d91 0%, #312a6c 99%);
+    background: linear-gradient(to right, #852d91 0%, #312a6c 99%);
+    color: #fff;
+    border-radius: 40px;
+    border: 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+  }
+  .form-button:hover {
+    opacity: 0.7;
+  }
+  .bold {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-left: 4.5%;
+  }
+  .bold:hover {
+    color: purple;
+  }
+  .icon1 {
+    width: 80px;
+    margin-left: 20rem;
+  }
+  .icon1 img {
+    width: 115%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7,
+      -8px -8px 15px #fff;
+  }
+  
