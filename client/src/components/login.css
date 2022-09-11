@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  max-width: 400px;
+  min-height: 500px;
+  margin: 80px auto;
+  padding: 40px 30px 30px 30px;
+  background-color: #ecf0f3;
+  border-radius: 15px;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  background-image: url('./images/back.png');
+}
+
+.icon {
+  width: 80px;
+  margin: auto;
+}
+
+.icon img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7,
+    -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 1.3px;
+  padding-left: 10px;
+  color: orchid;
+}
+
+.wrapper .form-field input {
+  margin-top: 15px;
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 10px 15px 10px 10px;
+  background: #fcd6e3;
+  background: #fb83a7;
+  background: #ce9ef2;
+  background: #ce9ef2;
+  background: #ce9ef2;
+  background: #ffe9fb;
+  background: -moz-linear-gradient(135deg, #ffe9fb 0%, #e4fef6 100%);
+  background: -webkit-linear-gradient(135deg, #ffe9fb 0%, #e4fef6 100%);
+  background: linear-gradient(135deg, #ffe9fb 0%, #e4fef6 100%);
+}
+
+.wrapper .form-field {
+  padding-left: 4px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border-bottom: 3px solid orchid;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .btn {
+  font-size: 1.5rem;
+  box-shadow: none;
+  width: 50%;
+  margin-left: 9rem;
+  height: 40px;
+  background-color: #03a9f4;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+  letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+  background-color: lightgreen;
+  color: purple;
+}
+
+.text-center {
+  margin-top: 3rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #03a9f4;
+}
+
+.text-center:hover {
+  color: red;
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    margin: 30px 20px;
+    padding: 40px 15px 15px 15px;
+  }
+}
