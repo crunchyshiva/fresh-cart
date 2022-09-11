@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header/index';
 import Home from './screens/Home/index';
+import Item from './screens/ItemScreen/index';
 import About from './screens/About/index';
 import Contact from './screens/Contact/index';
 import Signup from './screens/Signup/index';
@@ -16,10 +17,12 @@ import { initialState, reducer } from './reducer/UseReducer';
 import 'antd/dist/antd.css';
 //  context API
 export const UserContext = createContext();
+
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/Item" element={<Item />} />
       <Route path="/about" element={<About />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Signup" element={<Signup />} />

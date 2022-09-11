@@ -1,0 +1,178 @@
+.itemContainer{
+    text-transform: capitalize;
+    background: #ffffff !important;
+    position: absolute;
+    bottom: 0;
+    top: 7rem;
+    width: 100%;
+}
+
+.item-content{
+    overflow: auto !important;
+}
+.alert-error{
+    z-index:1
+}
+.category-sidebar-1{
+    min-width: 300px !important;
+    width: 200px !important;
+    height: 100% !important;
+    background: white !important;
+}
+
+.category-sidebar-2{
+    background: #ffffff !important;
+    min-width: 370px !important;
+    width: 200px !important;
+    height: 100% !important;
+}
+
+.itemCartContainer{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+}
+.cartPriceContainer{
+    position: absolute;
+    height: 8rem;
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+.row{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+.total {
+    position: relative;
+    float: left;
+    height: 3rem;
+    width: 100%;
+    line-height: 3rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+.text--1 {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.price--1 {
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+.delivery {
+    line-height: 2.2rem;
+}
+.proceedToCheckoutFooter{
+    position: absolute !important;
+    height: 5rem !important;
+    width: 100%;
+    text-transform: capitalize;
+    bottom: 0;
+}
+.itemIntoCart {
+    position: absolute;
+    top: 10rem;
+    bottom: 5rem;
+    width: 100%;
+    background: white;
+    overflow: auto;
+}
+.itemImage {
+    position: relative;
+    float: left;
+    height: 10rem;
+    width: 30%;
+    line-height: 17rem;
+}
+.itemImage-product{
+    position: relative;
+    float: left;
+    height: 10rem;
+    width: 30%;
+    line-height: 11rem;
+}
+.updatePrice {
+    position: relative;
+    width: 70%;
+    float: right;
+    height: 10rem;
+}
+.units {
+    position: absolute;
+    top: 0.2rem;
+    width: auto;
+    right: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    border-radius: .4rem;
+    border: 1px solid gray;
+}
+.itemName-icon {
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    height: 4rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+.operation {
+    position: absolute;
+    top: 5.8rem;
+    bottom: 0;
+    width: 100%;
+}
+.multiplecation {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    bottom: 0;
+    padding: .8rem;
+    box-sizing: border-box;
+}
+.tab {
+    position: relative;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.minus {
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+  
+}
+.addition {
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+  
+}
+.price {
+    width: 7rem;
+}
+.finalPrice {
+    position: absolute;
+    right: 1rem;
+    bottom: 2.5rem;
+    width: 7rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+  
