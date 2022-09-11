@@ -1,16 +1,19 @@
 import React, { useReducer, createContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import Logout from './components/Logout';
-import Errorpage from './components/Errorpage';
+
+import Header from './components/Header/index';
+import Home from './screens/Home/index';
+import About from './screens/About/index';
+import Contact from './screens/Contact/index';
+import Signup from './screens/Signup/index';
+import Login from './screens/Login/index';
+import Logout from './screens/Logout/index';
+import Errorpage from './screens/ErrorHandling/index';
+
 import { initialState, reducer } from './reducer/UseReducer';
 
+import 'antd/dist/antd.css';
 //  context API
 export const UserContext = createContext();
 const Routing = () => {
