@@ -3,10 +3,10 @@
     float: left;
     height: 30rem;
     width: 25rem;
-    margin: 1.7rem;
+    margin: 0.5rem;
     background: white;
     box-sizing: border-box;
-    border: 1px solid lightgray;
+    border: 2px solid #a18cd1;
 }
 
 .itemImage{
@@ -17,7 +17,7 @@
 }
 
 .item-icon{
-    height: 16.8rem;
+    height: 14rem;
 }
 
 .itemName{
@@ -27,6 +27,7 @@
     box-sizing: border-box;
     padding: 0.5rem;
     text-transform:capitalize;
+    font-weight: bolder;
 }
 
 .footer{
@@ -40,31 +41,32 @@
     position: absolute;
     padding: 0.5rem;
     box-sizing: border-box;
-    border: 1px solid orange;
+    border: 2px solid orange;
     height: 3rem;
     line-height: 2rem;
-    left: 2rem;
-    border-radius: 1rem
+    left: 1.8rem;
+    border-radius: 1.5rem
 }
 
 .price{
     position: absolute;
     bottom: 2rem;
     height: 2rem;
-    line-height: 2rem;
-    width: 6rem;
+    line-height: 3rem;
+    width: 10rem;
     left: 2rem;
 }
 
 .old{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     top: 4rem;
-    color: lightgray;
+    color:brown;
     text-decoration: line-through;
 }
 
 .new{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .addCart{
@@ -75,8 +77,11 @@
     width: 10rem;
     background: #1890ff;
     color:white;
-    border-radius: 1rem;
+    border-radius: 2rem;
     text-align: center;
     line-height: 4rem;
     cursor: pointer;
+    font-weight: bold;
+    color: black;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }

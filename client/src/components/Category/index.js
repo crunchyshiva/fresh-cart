@@ -7,7 +7,7 @@ const Category = () => {
     const navigate = useNavigate();
   return (
     <div>
-        <div className='caption'>categories</div>
+        <div className='caption'>Categories</div>
         {cat.map(item =>
             <div className='categories' onClick={()=> navigate(`/Item`,{state:{selectedCategory:item.id}})}>
                 <div className='category-icon'>

@@ -25,14 +25,14 @@ const Item = ({selectedCategory,cart,setCart}) => {
             </div>
             <div className='itemName'>{item.name}</div>
             <div className='footer'>
-                <div className='pricingOption'> 500g
+                <div className='pricingOption'>500g
                   <span className='unit'></span>
                 </div>
                 <div className='price old'>
-                    <span className='rs'>₹ {item.price}</span>
+                    <span className='rs'>₹{item.price}</span>
                 </div>
                 <div className='price new'>
-                    <span className='rs'>₹ {item.price-5}</span>
+                    <span className='rs'>₹{item.price-5}</span>
                 </div>
                 <div className='addCart' onClick={() => handleCart(item)}>Add To Cart</div>
             </div>

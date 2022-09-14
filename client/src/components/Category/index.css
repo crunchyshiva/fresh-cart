@@ -1,18 +1,23 @@
 .categories{
     position: relative;
     float: left;
-    margin: 0.5rem;
-    height: 35rem;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    height: 34rem;
     width: 23.9%;
     padding: 0.5rem;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);;
     box-sizing: border-box;
     border: 1px solid #222e40;
+   
 }
 
 .caption{
+    font-size: larger;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
     float: left;
-    height: 5rem;
+    height: 3rem;
     width: 100%;
     line-height: 5rem;
     padding-left: 0.5rem;
@@ -28,27 +33,29 @@
     width: 100%;
     text-align: center;
     line-height: 20rem;
+    filter: drop-shadow(8px 8px 4px yellow);
 }
 
 .name{
+    text-align: center;
     position: relative;
     float: left;
-    height: 5rem;
+    height: 4rem;
     width: 100%;
-    line-height: 5rem;
+    line-height: 2rem;
     padding-left: 0.5rem;
     box-sizing: border-box;
     text-transform: capitalize;
-    border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
+    border-bottom: 2px solid blueviolet;
+    border-top: 2px solid blueviolet;
     font-weight:700;
 }
 
 .des{
     position: relative;
     float: left;
-    width: 100%;
-    height: 10rem;
+    width: 101%;
+    height: 3rem;
     text-transform: capitalize;
     padding: 0.5rem;
     box-sizing: border-box;
