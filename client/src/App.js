@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/index';
 import Home from './screens/Home/index';
 import Item from './screens/ItemScreen/index';
+import Checkout from './screens/checkout/index';
 import About from './screens/About/index';
 import Contact from './screens/Contact/index';
 import Signup from './screens/Signup/index';
@@ -23,6 +24,7 @@ const Routing = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Item" element={<Item />} />
+      <Route path="/Checkout" element={<Checkout />} />
       <Route path="/about" element={<About />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Signup" element={<Signup />} />

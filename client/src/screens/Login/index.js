@@ -37,10 +37,10 @@ const Login = () => {
 
   return (
     <div className="wrapper">
-      <div className="icon">
+      <div className="loginicon">
         <img src='/images/login1.png' alt="" />
       </div>
-      <div className="text-center mt-4 name">Sign-In</div>
+      <div className="text-center mt-4 loginname">Sign-In</div>
       <form method="POST" className="p-3 mt-3">
         <div className="form-field  align-items-center">
           <span className="user" />

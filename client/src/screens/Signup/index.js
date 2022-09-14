@@ -67,7 +67,7 @@ const Signup = () => {
               <div className="icon1">
                 <img src='/images/signuppic.jpg' alt="" />
               </div>
-              <div id="h2" className="text-center name">
+              <div id="shivam" className="text-center name">
                 Sign-Up
               </div>
               <form
