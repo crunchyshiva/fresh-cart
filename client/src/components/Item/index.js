@@ -3,16 +3,29 @@ import {items} from './data';
 
 import './index.css';
 
-const Item = ({selectedCategory,cart,setCart}) => {
+const Item = ({selectedCategory,cart,setCart,setSubTotal}) => {
 
    const handleCart = (item) => {
     const newState = [...cart];
     const isExist = cart.some(el => el.id === item.id);
     const index = cart.findIndex(el => el.id === item.id);
     if(!isExist){
-        setCart(prevState => [...prevState,item])
+        if(item.q === 0){
+            item.q += 1
+        } 
+        const newArray =[
+            ...cart,
+            item
+        ]
+        item.subtotal = item.q * (item.price-item.discount);
+        const total = newArray.length> 0 && newArray.reduce((previous, current, index , array) => previous + current.subtotal,0);
+        setSubTotal(total);
+        setCart(prevState => [...prevState,item]);      
     }else{
-       newState[index].q += 1
+       newState[index].q += 1;
+       newState[index].subtotal = newState[index].q * (newState[index].price-newState[index].discount);
+       const total = newState.length> 0 && newState.reduce((previous, current, index , array) => previous + current.subtotal,0);
+       setSubTotal(total)   
        setCart(newState)
     }
    }
@@ -32,7 +45,7 @@ const Item = ({selectedCategory,cart,setCart}) => {
                     <span className='rs'>₹ {item.price}</span>
                 </div>
                 <div className='price new'>
-                    <span className='rs'>₹ {item.price-5}</span>
+                    <span className='rs'>₹ {item.price-item.discount}</span>
                 </div>
                 <div className='addCart' onClick={() => handleCart(item)}>Add To Cart</div>
             </div>

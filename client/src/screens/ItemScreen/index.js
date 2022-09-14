@@ -11,6 +11,7 @@ const ItemScreen = ({ props }) => {
   const [category, setCategory] = useState([]);
   const [isCartEmpty, setIsCartEmpty] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [subTotal, setSubTotal] = useState(0);
 
   const location = useLocation();
   const { Content, Sider } = Layout;
@@ -25,16 +26,22 @@ const ItemScreen = ({ props }) => {
     const index = cart.findIndex(el => el.id === id);
     const newState = [...cart];
     newState[index].q += 1
+    newState[index].subtotal = newState[index].q * (newState[index].price - newState[index].discount);
+    const total = newState.length> 0 && newState.reduce((previous, current, index , array) => previous + current.subtotal,0);
+    setSubTotal(total)
     setCart(newState)
   }
 
   const deletion = (id) => {
     const index = cart.findIndex(el => el.id === id);
     const newState = [...cart];
-    newState[index].q -= 1
+    newState[index].q -= 1;
+    newState[index].subtotal = newState[index].subtotal -  (newState[index].price - newState[index].discount);
     if(newState[index].q === 0){
       newState.splice(index, 1);
     }
+    // const total = newState.length> 0 && newState.reduce((previous, current, index , array) => current.subtotal - previous,0);
+    // setSubTotal(total)
     setCart(newState)
   }
 
@@ -46,12 +53,14 @@ const ItemScreen = ({ props }) => {
 
   return (
     <Layout className='itemContainer'>
-      <Sider className='category-sidebar-1'>
+      <Sider className='category-sidebar-1' >
         <Menu defaultSelectedKeys={['1']} mode="inline" items={category} 
           selectedKeys={selectedCategory} onClick={(e) => setSelectedCategory(e.key)} />
       </Sider>
       <Content className='item-content'>
-        <Item selectedCategory={selectedCategory} cart={cart} setCart={setCart} />
+        {/* <div style={{textAlign:'center'}}> */}
+          <Item selectedCategory={selectedCategory} cart={cart} setCart={setCart} setSubTotal={setSubTotal} />
+        {/* </div> */}
       </Content>
       <Sider className='category-sidebar-2'>
       {isCartEmpty && <Alert message="cart is empty" type="error" 
@@ -63,7 +72,7 @@ const ItemScreen = ({ props }) => {
                 <div class="text--1">Subtotal</div>
                 <div class="price--1">
                   <span class="rs">₹</span>
-                  <span class="value">0</span>
+                  <span class="value">{subTotal}</span>
                 </div>
               </div>
             </div>
@@ -94,12 +103,12 @@ const ItemScreen = ({ props }) => {
                       <div className='tab multi'>*</div>
                       <div className='tab price'>
                         <span class="rs">₹</span>
-                        <span class="value">{item.price*item.q}</span>
+                        <span class="value">{item.price - item.discount}</span>
                       </div>
                     </div>
                     <div className='finalPrice'>
                       <span class="rs">₹</span>
-                      <span class="value">{item.price*item.q}</span>
+                      <span class="value">{(item.price-item.discount)*item.q}</span>
                     </div>
                   </div>
                 </div>
