@@ -47,7 +47,7 @@ router.post('/signin', async (req, res) => {
       return res.status(400).json({ error: 'please fill your data' });
     }
     const userLogin = await User.findOne({ email: email });
-    // console.log(userLogin);
+    // console.log(userLogin.name,userLogin.phone);
     if (userLogin) {
       const isMatch = await bcrypt.compare(password, userLogin.password);
       token = await userLogin.generateAuthToken();
@@ -56,6 +56,8 @@ router.post('/signin', async (req, res) => {
         expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
       });
+      res.cookie('name', userLogin.name);
+      res.cookie('contactNumber', userLogin.phone)
       if (!isMatch) {
         res.status(400).json({ error: 'invalid credential' });
       } else {
@@ -110,7 +112,7 @@ router.get('/contact', authenticate, async (req, res) => {
 
 router.get('/logout', (req, res) => {
   console.log('Hello my logout page');
-  res.clearCookie('jwtoken', { path: '/' });
+  res.clearCookie('jwtoken','name','contactNumber', { path: '/' });
   res.status(200).send('User logout');
 });
 

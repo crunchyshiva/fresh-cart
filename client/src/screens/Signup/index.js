@@ -31,7 +31,7 @@ const Signup = () => {
   const PostData = async (e) => {
     e.preventDefault();
     const { name, email, phone, work, password, cpassword } = user;
-    const res = await fetch('/register', {
+    const res = await fetch('http://localhost:8080/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -7,8 +7,9 @@ dotenv.config({ path: './config.env' });
 require('../server/db/conn');
 
 const PORT = process.env.PORT;
-app.use(cors());
+app.use(cors({ origin : '*'}));
 app.use(express.json());
+app.use(require('./router/Order'));
 app.use(require('./router/auth'));
 
 // app.get('/about', middleware, (req, res) => {

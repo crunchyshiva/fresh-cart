@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext} from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { Alert, Modal } from 'antd';
+import axios from "axios";
+import Cookies from 'js-cookie';
 import './index.css';
+import { UserContext } from '../../App';
 
 const Checkout = () => {
+    const { state, dispatch } = useContext(UserContext);
     const navigate = useNavigate();
     const location = useLocation();
     const deliveryCharge = 20;
@@ -11,6 +15,7 @@ const Checkout = () => {
     const [subTotal, setSubTotal] = useState(0);
     const [alert, setAlert] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [orderPlaced, setOrderPlaced] = useState(false);
     const [address, setAddress] = useState({
         name: '',
         house: '',
@@ -37,6 +42,31 @@ const Checkout = () => {
     }
 
     const handleOk = () => {
+        if(state){
+            const order = {
+                items:cart,
+                amount:subTotal+deliveryCharge,
+                userDetail:{
+                    name:Cookies.get('name'),
+                    mobileNumber:Cookies.get('contactNumber')
+                },
+                userAddress:{
+                    name:address.name,
+                    house:address.house,
+                    street:address.street,
+                    area:address.area
+                },
+            }
+            axios({
+                url: "http://localhost:8080/order",
+                method: "POST",
+                data: order,
+            })
+            .then((res) => {setOrderPlaced(true)})
+            .catch((err) => {console.log(err)});
+        }else{
+            navigate('/login')
+        }
         setIsModalOpen(false);
     };
 
@@ -55,6 +85,7 @@ const Checkout = () => {
                 {isModalOpen && <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                     <p><b>Confirm Your Order ?</b></p>
                 </Modal>}
+                {orderPlaced && <Alert message="Your order has been successfully placed." type="error" className='alert-success' closable afterClose={() => setOrderPlaced(false)} />}
                 {alert && <Alert message="we would like to know your delivery place" type="error" className='alert-error' closable afterClose={() => setAlert(false)} />}
                 <div class="userDetailsContainer">
                     <div class="rows address">
