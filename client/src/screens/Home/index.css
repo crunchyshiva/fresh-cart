@@ -1,4 +1,4 @@
 .homeContainer{
-    background: #ffcef3; background: -moz-linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%); background: -webkit-linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%); background: linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%);
+     background: -moz-linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%); background: -webkit-linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%); background: linear-gradient(135deg,  #ffcef3 0%,#e9e0ed 100%);
     padding:2% 20% 0 20% !important;
 }

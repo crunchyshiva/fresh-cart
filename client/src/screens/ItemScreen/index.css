@@ -5,7 +5,7 @@
     bottom: 0;
     top: 7rem;
     width: 100%;
-    
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%)!important;
 }
 
 .item-content{

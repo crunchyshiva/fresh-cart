@@ -6,7 +6,7 @@ import {cat} from './data';
 const Category = () => {
     const navigate = useNavigate();
   return (
-    <div>
+    <div >
         <div className='caption'>Categories</div>
         {cat.map(item =>
             <div className='categories' onClick={()=> navigate(`/Item`,{state:{selectedCategory:item.id}})}>
