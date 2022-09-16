@@ -1,10 +1,9 @@
 import { Carousel } from 'antd';
 import React from 'react';
-// import './index.css'
 
 const Slider = () => (
   <Carousel className='caraousel' autoplay>
-    <div className='slider'>
+    <div >
       <img src='/images/icon-chocolate.jpg' alt='caraousel-1' />
     </div>
     <div>

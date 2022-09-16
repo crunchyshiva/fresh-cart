@@ -80,6 +80,9 @@ const Checkout = () => {
             <div class="header">
                 <img src="../images/icon-left-white.png" alt="" class="iconBack" onClick={() => navigate(`/Item`, { state: { selectedCategory: location.state.selectedCategory, cart: cart } })} />
                 <div class="notifyBar"></div>
+                <div className='welcome'>
+                <p>For purchasing goods we are very thankful to you</p>
+                </div>
             </div>
             <div class="contentContainer">
                 {isModalOpen && <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
