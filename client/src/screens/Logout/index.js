@@ -8,7 +8,7 @@ function Logout() {
 
   const nav = useNavigate();
   useEffect(() => {
-    fetch('/logout', {
+    fetch('http://localhost:8080/logout', {
       method: 'GET',
       headers: {
         Accept: 'application/json',

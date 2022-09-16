@@ -2,6 +2,7 @@ import React, { useState, useEffect ,useContext} from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { Alert, Modal } from 'antd';
 import axios from "axios";
+import Cookies from 'js-cookie';
 import './index.css';
 import { UserContext } from '../../App';
 
@@ -46,8 +47,8 @@ const Checkout = () => {
                 items:cart,
                 amount:subTotal+deliveryCharge,
                 userDetail:{
-                    name:'username',
-                    mobileNumber:'8430212018'
+                    name:Cookies.get('name'),
+                    mobileNumber:Cookies.get('contactNumber')
                 },
                 userAddress:{
                     name:address.name,
